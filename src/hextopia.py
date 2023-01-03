@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network
 
-from config import NUM_REGIONS, NUM_NODES_PER_REGION
+from config import NUM_REGIONS, NUM_NODES_PER_REGION, COMPACTNESS_THRESHOLD
 from region import Region
 from node import Node
 from graph import graph
@@ -87,11 +87,10 @@ def runExperiment(min_wins = 8, min_minority = 2, min_compact = 8, boundary_coun
 
 	visualize(graph)
 
+## Run experiment to find configuration satisfying minimum
+## constraints
+runExperiment(min_wins = 8, min_compact = 9, boundary_count = 7)
 
-# runExperiment(min_wins = 8, min_compact = 9, boundary_count = 7)
-
-
-runIteration(8)
-visualize(graph)
-
-
+## Run isolated iteration
+# runIteration(8)
+# visualize(graph)
