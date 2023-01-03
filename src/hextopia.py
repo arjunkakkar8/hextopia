@@ -20,7 +20,7 @@ def visualize(node_list):
 	net = Network(select_menu=True)
 	net.from_nx(G)
 	net.show_buttons()
-	net.show('graph.html')
+	net.show('../output/graph.html')
 
 	# node_colors = [node.color for node in node_list]
 	# node_labels = {node.id: node.id for node in node_list}
